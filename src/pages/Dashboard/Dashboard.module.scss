@@ -1,3 +1,31 @@
 .dashboard {
-  background-color: crimson;
+  background-color: silver;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+
+  & > * {
+    background-color: seagreen;
+    border-radius: 2rem;
+    padding: 2rem;
+  }
+
+  &__today {
+    grid-row: 1 / -1;
+  }
+
+  &__assignments {
+    grid-row: 1 / -1;
+  }
+
+  &__tests {
+    grid-row: 1 / span 1
+  }
+
+  &__calendar {
+    grid-row: 2 / span 1;
+  }
 }
