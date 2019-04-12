@@ -7,12 +7,6 @@
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 2rem;
 
-  & > * {
-    background-color: seagreen;
-    border-radius: 2rem;
-    padding: 2rem;
-  }
-
   &__today {
     grid-row: 1 / -1;
   }

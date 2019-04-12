@@ -7,18 +7,10 @@ class Dashboard extends Component {
     render() {
         return (
             <div className={styles.dashboard}>
-                <DashboardSection classes={styles['dashboard__today']}>
-                    Today
-                </DashboardSection>
-                <DashboardSection classes={styles['dashboard__assignments']}>
-                    Assignments
-                </DashboardSection>
-                <DashboardSection classes={styles['dashboard__tests']}>
-                    Tests
-                </DashboardSection>
-                <DashboardSection classes={styles['dashboard__calendar']}>
-                    Calendar
-                </DashboardSection>
+                <DashboardSection title="Today" classes={styles['dashboard__today']} />
+                <DashboardSection title="Assignments" classes={styles['dashboard__assignments']} />
+                <DashboardSection title="Tests" classes={styles['dashboard__tests']} />
+                <DashboardSection title="Calendar" classes={styles['dashboard__calendar']} />
             </div>
         )
     }

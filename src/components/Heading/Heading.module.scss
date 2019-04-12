@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+.header {
+  font-family: $font-heading;
+}
+
+.large {
+  font-size: 5rem;
+}
+
+.medium {
+  font-size: 3rem;
+}
+
+.small {
+  font-size: 1.8rem;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.thick {
+  font-weight: 700;
+}
