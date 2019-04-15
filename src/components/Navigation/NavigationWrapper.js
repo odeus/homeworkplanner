@@ -1,4 +1,6 @@
-.nav {
+import styled from 'styled-components';
+
+export default styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,10 +12,4 @@
   :not(:last-child) {
     margin-bottom: 2rem;
   }
-
-  &__logo {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-  }
-}
+`;

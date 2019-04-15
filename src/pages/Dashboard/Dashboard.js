@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Dashboard.module.scss'
 
-import DashboardSection from '../../components/DashboardSection/DashboardSection';
+import DashboardSection from '../../components/DashboardSection/Section';
 
 class Dashboard extends Component {
     render() {
