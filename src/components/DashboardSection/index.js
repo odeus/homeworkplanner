@@ -3,8 +3,8 @@ import React from 'react';
 import Section from './Section';
 import Heading from '../Heading';
 
-const dashBoardSection = ({ classes, title }) => (
-    <Section className={classes}>
+const dashBoardSection = ({ gridRow, title }) => (
+    <Section row={gridRow}>
       <Heading.small>{title}</Heading.small>
     </Section>
 );

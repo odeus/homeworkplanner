@@ -6,10 +6,6 @@ export default styled.div`
   align-items: center;
   height: 100vh; // TODO: REMOVE THIS
 
-  background-color: aqua;
+  background-color: ${props => props.theme.textColor};
   padding: 2rem;
-
-  :not(:last-child) {
-    margin-bottom: 2rem;
-  }
 `;

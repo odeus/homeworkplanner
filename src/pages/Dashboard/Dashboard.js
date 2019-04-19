@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
-import styles from './Dashboard.module.scss'
+import styled from 'styled-components';
 
-import DashboardSection from '../../components/DashboardSection/Section';
+export default styled.div`
+  background-color: ${props => props.theme.background};
+  padding: 2rem;
 
-class Dashboard extends Component {
-    render() {
-        return (
-            <div className={styles.dashboard}>
-                <DashboardSection title="Today" classes={styles['dashboard__today']} />
-                <DashboardSection title="Assignments" classes={styles['dashboard__assignments']} />
-                <DashboardSection title="Tests" classes={styles['dashboard__tests']} />
-                <DashboardSection title="Calendar" classes={styles['dashboard__calendar']} />
-            </div>
-        )
-    }
-}
-
-export default Dashboard;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+`

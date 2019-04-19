@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-import './App.scss';
+import theme from './theme';
 
-import Dashboard from './pages/Dashboard/Dashboard';
-import Navigation from './components/Navigation/Navigation';
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from './globalStyle'
+import Layout from './Layout';
+import Dashboard from './pages/Dashboard/';
+import Navigation from './components/Navigation/';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navigation />
-        <Dashboard />
+      <div>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <Navigation />
+            <Dashboard />
+          </Layout>
+        </ThemeProvider>
       </div>
     );
   }

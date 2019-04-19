@@ -8,6 +8,7 @@ const weights = {
 
 export const large = styled.h1`
   font-size: 5rem;
+  font-family: ${props => props.theme.headerFont}
 
   ${props => props.weight && css`
     font-weight: ${props.weight};
@@ -16,6 +17,7 @@ export const large = styled.h1`
 
 export const medium = styled.h2`
   font-size: 3rem;
+  font-family: ${props => props.theme.headerFont}
   
   ${props => props.weight && css`
     font-weight: ${weights[props.weight]};  
@@ -24,6 +26,7 @@ export const medium = styled.h2`
 
 export const small = styled.h3`
   font-size: 1.8rem;
+  font-family: ${props => props.theme.headerFont}
   
   ${props => props.weight && css`
     font-weight: ${weights[props.weight]};  
