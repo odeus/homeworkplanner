@@ -1,6 +1,14 @@
-import styled from 'styled-components';
+import React from 'react';
 
-export default styled.div`
-  display: grid;
-  grid-template-columns: 10rem 1fr;
-`;
+import Wrapper from './Wrapper'
+import Router from './Router';
+import Navigation from '../components/Navigation';
+
+const layout = props => (
+  <Wrapper>
+      <Navigation />
+      <Router />
+  </Wrapper>
+);
+
+export default layout;

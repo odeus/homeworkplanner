@@ -1,12 +1,16 @@
 import styled, { css } from 'styled-components';
-import { transparentize } from 'polished';
+
+import  { small } from '../Heading'
 
 export default styled.div`
   ${props => props.row && css`
       grid-row: ${props.row};
   `}
+  border: 1px solid ${props => props.theme.lightAccent};
+  background-color: ${props => props.theme.background};
   
-  background-color: ${props => transparentize(.7, props.theme.lightAccent)};
-  padding: 2rem;
-  border-radius: 2rem;
+  ${small} {
+    padding: 2rem;
+    border-bottom: 2px solid ${props => props.theme.lightAccent}
+  }
 `;
