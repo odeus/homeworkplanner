@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import theme from './shared/theme';
+import theme from './theme/theme';
 
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyle from './shared/globalStyle'
+import GlobalStyle from './theme/globalStyle'
 import Layout from './Layout';
 
 class App extends Component {
