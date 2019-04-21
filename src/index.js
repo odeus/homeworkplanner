@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './theme/globalStyle';
+import './shared/theme/globalStyle';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "date-fns": "^2.0.0-alpha.27",
     "node-sass": "^4.11.0",
     "polished": "^3.2.0",
     "react": "^16.8.6",
+    "react-big-calendar": "^0.20.4",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
