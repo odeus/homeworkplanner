@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
-import dateFnsLocalizer from '../../shared/date/date-fns.localizer'
-import en from 'date-fns/locale/en-GB';
-import nl from 'date-fns/locale/nl';
+import Scheduler from "../../components/Scheduler";
 
-import BigCalendar from 'react-big-calendar';
-
-const localizer = dateFnsLocalizer({ en, nl });
+import Wrapper from './Calendar';
 
 class Calendar extends Component {
   render() {
     return (
-        <div>
-          {/*Calendar*/}
-          <BigCalendar
-            localizer={localizer}
-            events={[]}
-            startAccessor="start"
-            endAccessor="end"
-            // culture="nl"
-          />
-        </div>
+        <Wrapper>
+          <Scheduler />
+        </Wrapper>
     )
   }
 }
