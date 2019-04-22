@@ -1,5 +1,5 @@
 import React from 'react';
-import { getHourArray, getWeekArray } from '../../shared/dates/helpers';
+import { getHourArray, getWeekArray, getWeekNumberString } from '../../shared/dates/helpers';
 
 import TimeGrid from './TimeGrid';
 import { Fragment as Column } from 'react';
@@ -10,7 +10,7 @@ const Scheduler = () => {
   return (
     <TimeGrid>
       <Column>
-        <GridItem isFixed />
+        <GridItem isFixed>{getWeekNumberString()}</GridItem>
         <GridItem hour isFixed allDay>All Day</GridItem>
         {getHourArray().map((hour, i) => (
             <GridItem hour key={hour}><Hour>{i !== 0 ? hour : null}</Hour></GridItem>

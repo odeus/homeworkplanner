@@ -3,6 +3,8 @@ import eachDayOfInterval from "date-fns/eachDayOfInterval";
 import startOfWeek from "date-fns/startOfWeek";
 import endOfWeek from "date-fns/endOfWeek";
 import format from "date-fns/format";
+import getISOWeek from 'date-fns/getISOWeek';
+import getISOWeeksInYear from 'date-fns/getISOWeeksInYear';
 
 export const getHourArray = () => {
   const now = new Date(2019, 0, 0, 0, 0, 0);
@@ -18,3 +20,8 @@ export const getWeekArray = () => {
   return eachDayOfInterval({ start: startOfWeek(now), end: endOfWeek(now) })
       .map(day => format(day, 'dd eee'));
 };
+
+export const getWeekNumberString = () => {
+  const now = new Date();
+  return `${getISOWeek(now)}/${getISOWeeksInYear(now)}`
+}
