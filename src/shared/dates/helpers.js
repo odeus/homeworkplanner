@@ -24,4 +24,9 @@ export const getWeekArray = () => {
 export const getWeekNumberString = () => {
   const now = new Date();
   return `${getISOWeek(now)}/${getISOWeeksInYear(now)}`
-}
+};
+
+export const getMonth = () => {
+  const now = new Date();
+  return format(now, 'MMMM yyyy')
+};
