@@ -7,7 +7,7 @@ class Calendar extends Component {
   render() {
     return (
         <Wrapper>
-          <Scheduler />
+          <Scheduler beginAt={6}/>
         </Wrapper>
     )
   }

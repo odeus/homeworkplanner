@@ -5,12 +5,22 @@ import endOfWeek from "date-fns/endOfWeek";
 import format from "date-fns/format";
 import getISOWeek from 'date-fns/getISOWeek';
 import getISOWeeksInYear from 'date-fns/getISOWeeksInYear';
+import differenceInMinutes from 'date-fns/differenceInMinutes';
+import startOfDay from 'date-fns/startOfDay';
 
-export const getHourArray = () => {
+export const getHourArray = (startAt) => {
   const now = new Date(2019, 0, 0, 0, 0, 0);
   const hours = [];
-  for(let i = 0; i <= 23; i++) {
+  for(let i = startAt; i <= 23-startAt; i++) {
     hours.push(format(setHours(now, i), 'p'));
+  }
+  if(startAt !== 0) {
+    for(let i = 24-startAt; i <= 23; i++) {
+      hours.push(format(setHours(now, i), 'p'));
+    }
+    for(let i = 0; i < startAt; i++) {
+      hours.push(format(setHours(now, i), 'p'));
+    }
   }
   return hours;
 };
@@ -29,4 +39,11 @@ export const getWeekNumberString = () => {
 export const getMonth = () => {
   const now = new Date();
   return format(now, 'MMMM yyyy')
+};
+
+export const isCurrentDay = (date) => format(new Date(), 'dd eee') === date;
+
+export const getCurrentTimeInMinutes = () => {
+  const now = new Date();
+  return differenceInMinutes(now, startOfDay(now));
 };
