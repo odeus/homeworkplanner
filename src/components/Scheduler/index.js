@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import getWeek from 'date-fns/getWeek';
+import { weekStart } from "../../shared/dates/date";
 
 import Grid from './Grid';
 import Toolbar from './Toolbar/';
@@ -11,12 +11,12 @@ const Wrapper = styled.div`
 `;
 
 const Scheduler = ({ beginAt }) => {
-  const [week, setWeek] = useState(getWeek(new Date()));
+  const [date, setDate] = useState(weekStart(new Date()));
 
   return (
     <Wrapper>
-      <Toolbar week={week} setWeek={setWeek} />
-      <Grid week={week} beginAt={beginAt} />
+      <Toolbar date={date} setDate={setDate} />
+      <Grid date={date} beginAt={beginAt} />
     </Wrapper>
   )
 };
