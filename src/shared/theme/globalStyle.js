@@ -13,5 +13,9 @@ export default createGlobalStyle`
   
     box-sizing: border-box;
   }
+  
+  ::selection {
+    background: ${props => props.theme.lightAccent};
+  }
 `
 

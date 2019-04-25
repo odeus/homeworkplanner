@@ -10,9 +10,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <GlobalStyle />
         <ThemeProvider theme={theme}>
           <BrowserRouter>
+            <GlobalStyle />
             <Layout />
           </BrowserRouter>
         </ThemeProvider>

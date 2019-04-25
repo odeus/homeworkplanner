@@ -8,6 +8,7 @@ export const Wrapper = styled(EmptyItem)`
   background-color: ${props => props.theme.background};
   border-bottom: none;
   position: relative;
+  z-index: 51;
 `;
 
 export const Span = styled.span`

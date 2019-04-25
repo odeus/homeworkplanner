@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import {getHourArray,
   getWeekArray,
   getWeekNumberString,
@@ -15,13 +15,25 @@ import TimeIndicator from './TimeIndicator';
 
 const grid = ({ beginAt }) => {
   const [scrollHeight, setScrollHeight] = useState(0);
-  const getScrollHeightFromNode = useCallback(node => setScrollHeight(node.scrollHeight), []);
+  const [currentTime, setCurrentTime] = useState(0);
+  const getScrollHeightFromNode = useCallback(node => {
+    if(node !== null) setScrollHeight(node.scrollHeight);
+  }, []);
+
+  useEffect(() => {
+    setCurrentTime(getCurrentTimeInMinutes(beginAt));
+    const timeSetter = setInterval(() => {
+      setCurrentTime(getCurrentTimeInMinutes(beginAt));
+    }, 60000 - new Date().getMinutes()*1000);
+    return () => clearInterval(timeSetter);
+  }, []);
+
   return (
       <TimeGrid>
         <TimeIndicator
-            ref={getScrollHeightFromNode}
-            currentTime={(getCurrentTimeInMinutes()/(24*60) * scrollHeight)*100}/>
-        <Column>
+            percentage={currentTime/(24*60)}
+            scrollHeight={scrollHeight} />
+        <Column ref={getScrollHeightFromNode}>
           <FixedSide bold>{getWeekNumberString()}</FixedSide>
           <FixedSide allDay>All Day</FixedSide>
           {getHourArray(beginAt).map((hour, i) => (
