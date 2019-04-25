@@ -1,9 +1,9 @@
-import React from 'react';
-import { getMonth } from '../../shared/dates/helpers';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import getWeek from 'date-fns/getWeek';
 
 import Grid from './Grid';
-import Toolbar from './Toolbar';
+import Toolbar from './Toolbar/';
 
 const Wrapper = styled.div`
   max-height: 100vh;
@@ -11,10 +11,12 @@ const Wrapper = styled.div`
 `;
 
 const Scheduler = ({ beginAt }) => {
+  const [week, setWeek] = useState(getWeek(new Date()));
+
   return (
     <Wrapper>
-      <Toolbar>{getMonth()}</Toolbar>
-      <Grid beginAt={beginAt} />
+      <Toolbar week={week} setWeek={setWeek} />
+      <Grid week={week} beginAt={beginAt} />
     </Wrapper>
   )
 };

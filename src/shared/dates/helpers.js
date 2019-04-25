@@ -43,11 +43,15 @@ export const getWeekArray = () => {
 };
 
 /**
- * This function gives you the current week out of the full weeks in the year.
+ * This function gives you the current week out of the full weeks in the year, optionally with an already given week.
+ * @param [week]
  * @returns {string}
  */
-export const getWeekNumberString = () => {
+export const getWeekNumberString = (week) => {
   const now = new Date();
+  if(week) {
+    return `${week}/${getISOWeeksInYear(now)}`;
+  }
   return `${getISOWeek(now)}/${getISOWeeksInYear(now)}`;
 };
 

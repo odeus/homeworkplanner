@@ -13,7 +13,7 @@ import TimeGrid from "./TimeGrid";
 import Column from './Column';
 import TimeIndicator from './TimeIndicator';
 
-const grid = ({ beginAt }) => {
+const grid = ({ beginAt, week }) => {
   const [scrollHeight, setScrollHeight] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const getScrollHeightFromNode = useCallback(node => {
@@ -41,7 +41,7 @@ const grid = ({ beginAt }) => {
             percentage={currentTime/(24*60)}
             scrollHeight={scrollHeight} />
         <Column ref={getScrollHeightFromNode}>
-          <FixedSide bold>{getWeekNumberString()}</FixedSide>
+          <FixedSide bold>{getWeekNumberString(week)}</FixedSide>
           <FixedSide allDay>All Day</FixedSide>
           {getHourArray(beginAt).map((hour, i) => (
               <HourItem key={hour} hour={i !== 0 ? hour : null} />
