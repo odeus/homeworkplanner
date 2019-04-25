@@ -22,10 +22,17 @@ const grid = ({ beginAt }) => {
 
   useEffect(() => {
     setCurrentTime(getCurrentTimeInMinutes(beginAt));
-    const timeSetter = setInterval(() => {
+    let timeSetterInterval;
+    const timeTimeout = setTimeout(() => {
       setCurrentTime(getCurrentTimeInMinutes(beginAt));
-    }, 60000 - new Date().getMinutes()*1000);
-    return () => clearInterval(timeSetter);
+      timeSetterInterval = setInterval(() => {
+        setCurrentTime(getCurrentTimeInMinutes(beginAt));
+      }, 60000);
+    }, 60000 - new Date().getSeconds()*1000);
+    return () => {
+      clearTimeout(timeTimeout);
+      clearInterval(timeSetterInterval);
+    }
   }, []);
 
   return (
