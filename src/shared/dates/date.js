@@ -37,7 +37,7 @@ export const getHourArray = (startAt) => {
  * @param {Date} date
  * @returns {Array}
  */
-export const daysOfWeek =(date) => {
+export const daysOfWeek = (date) => {
   return eachDayOfInterval({ start: startOfWeek(date), end: endOfWeek(date) })
       .map(day => ({
         formatted: format(day, 'dd eee'),

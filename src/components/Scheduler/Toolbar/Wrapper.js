@@ -9,5 +9,5 @@ export default styled.div`
   display: flex;
   align-items: center;
   padding: 0 5rem;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
