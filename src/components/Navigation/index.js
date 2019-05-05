@@ -13,7 +13,10 @@ const navigation = () => (
       <NavList>
         <NavItem to="/">Dashboard</NavItem>
         <NavItem to="/calendar">Calendar</NavItem>
-        <NavItem to="/planner">Planner</NavItem>
+        <NavItem to="/assignments">Assignments</NavItem>
+        <NavItem to="/school">School</NavItem>
+        <NavItem to="/teachers">Teachers</NavItem>
+        <NavItem to="/holidays">Holidays</NavItem>
       </NavList>
     </NavigationWrapper>
 );
