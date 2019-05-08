@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Assignments from './Assignments';
+import AssignmentsWrapper from './Assignments';
 import Heading from '../../components/Heading';
 import Header from './Header';
 import Filterer from '../../components/Filterer';
@@ -9,7 +9,7 @@ import Input from '../../components/Input';
 import Card from '../../components/AssignmentCard';
 import Cards from './Cards';
 
-class Planner extends Component {
+class Assignments extends Component {
   state = {
     quickEntryValue: '',
     assignments: [{ title: 'Test Assignment', descr: 'Testing...' }]
@@ -29,7 +29,7 @@ class Planner extends Component {
 
   render() {
     return (
-        <Assignments>
+        <AssignmentsWrapper>
           <Header>
             <Heading.medium>Assignments</Heading.medium>
             <div>{this.state.assignments.length} assignments left</div>
@@ -47,9 +47,9 @@ class Planner extends Component {
             ))}
           </Cards>
           <AddCircle radius={6} />
-        </Assignments>
+        </AssignmentsWrapper>
     )
   }
 }
 
-export default Planner;
+export default Assignments;
