@@ -6,8 +6,7 @@ import Header from './Header';
 import Filterer from '../../components/Filterer';
 import AddCircle from '../../components/AddCircle';
 import Input from '../../components/Input';
-import Card from '../../components/AssignmentCard';
-import Cards from './Cards';
+import Card, { Wrapper } from '../../components/AssignmentCard';
 
 class Assignments extends Component {
   state = {
@@ -41,11 +40,11 @@ class Assignments extends Component {
               onKeyDown={(event) => event.keyCode === 13 ? this.addAssignmentHandler(event.target.value) : null}
               value={this.state.quickEntryValue}
           />
-          <Cards>
+          <Wrapper padding={3}>
             {this.state.assignments.map(assignment => (
                 <Card key={assignment.title} title={assignment.title} description={assignment.descr} />
             ))}
-          </Cards>
+          </Wrapper>
           <AddCircle radius={6} />
         </AssignmentsWrapper>
     )
