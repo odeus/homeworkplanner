@@ -42,7 +42,7 @@ class Assignments extends Component {
           />
           <Wrapper padding={3}>
             {this.state.assignments.map(assignment => (
-                <Card key={assignment.title} title={assignment.title} description={assignment.descr} />
+                <Card key={assignment.title} checkbox title={assignment.title} description={assignment.descr} />
             ))}
           </Wrapper>
           <AddCircle radius={6} />

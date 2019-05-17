@@ -5,5 +5,5 @@ import styled from "styled-components";
   height: ${props => props.height};
   background-color: #fff;
   position: absolute;
-  transition: transform .3s;
+  transition: transform .1s ease-in;
 `;

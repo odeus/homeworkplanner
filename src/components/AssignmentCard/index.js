@@ -5,14 +5,14 @@ import * as Information from './Information';
 import Checkbox from './Checkbox';
 import CardsWrapper from './CardsWrapper';
 
-const assignmentCard = ({ title, description="", margin }) => {
+const assignmentCard = ({ title, description="", margin, checkbox }) => {
   const [checked, setChecked] = useState(false);
 
   const onCheckedHandler = (event) => setChecked(event.target.checked);
 
   return (
       <Card margin={margin}>
-        <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/>
+        {checkbox ? <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/> : null}
         <div>
           <Information.title>{title}</Information.title>
           <Information.description>{description}</Information.description>
