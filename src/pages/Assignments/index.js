@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AssignmentContext from '../../shared/contexts/context';
 
 import AssignmentsWrapper from './Assignments';
 import Heading from '../../components/Heading';
@@ -6,32 +7,37 @@ import Header from './Header';
 import Filterer from '../../components/Filterer';
 import AddCircle from '../../components/AddCircle';
 import Input from '../../components/Input';
-import Card, { Wrapper } from '../../components/AssignmentCard';
+import { AssignmentCard, Wrapper } from '../../components/Card';
 
 class Assignments extends Component {
+  static contextType = AssignmentContext;
+
   state = {
     quickEntryValue: '',
-    assignments: [{ title: 'Test Assignment', descr: 'Testing...' }]
   };
 
   addAssignmentHandler = (value) => {
-    const assignments = [...this.state.assignments];
-    assignments.push({
-      title: value,
-      descr: 'Test'
-    });
+    const [assignments, setAssignments] = this.context;
+    setAssignments([
+        ...assignments,
+        {
+          title: value,
+          descr: 'test'
+        }
+    ]);
     this.setState({
-      assignments,
       quickEntryValue: ''
     })
   };
 
   render() {
+    const [assignments] = this.context;
+
     return (
         <AssignmentsWrapper>
           <Header>
             <Heading.medium>Assignments</Heading.medium>
-            <div>{this.state.assignments.length} assignments left</div>
+            <div>{assignments.length} assignments left</div>
             <Filterer />
           </Header>
           <Input
@@ -41,8 +47,8 @@ class Assignments extends Component {
               value={this.state.quickEntryValue}
           />
           <Wrapper padding={3}>
-            {this.state.assignments.map(assignment => (
-                <Card key={assignment.title} checkbox title={assignment.title} description={assignment.descr} />
+            {assignments.map(assignment => (
+                <AssignmentCard key={assignment.title} checkbox title={assignment.title} description={assignment.descr} />
             ))}
           </Wrapper>
           <AddCircle radius={6} />

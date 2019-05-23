@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
+import Card from "./Card";
+import Checkbox from "./Checkbox";
+import * as Information from "./Information";
 
-import Card from './Card';
-import * as Information from './Information';
-import Checkbox from './Checkbox';
-import CardsWrapper from './CardsWrapper';
-
-const assignmentCard = ({ title, description="", margin, checkbox }) => {
+const assignmentCard = ({ title, description="", margin }) => {
   const [checked, setChecked] = useState(false);
 
   const onCheckedHandler = (event) => setChecked(event.target.checked);
 
   return (
       <Card margin={margin}>
-        {checkbox ? <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/> : null}
+        <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/>
         <div>
           <Information.title>{title}</Information.title>
           <Information.description>{description}</Information.description>
@@ -22,5 +20,3 @@ const assignmentCard = ({ title, description="", margin, checkbox }) => {
 };
 
 export default assignmentCard;
-
-export const Wrapper = CardsWrapper;
