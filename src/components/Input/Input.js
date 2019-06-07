@@ -7,7 +7,7 @@ export default styled.input`
   color: ${props => props.theme.textColor};
   padding: 1rem .5rem;
   font-size: 1.5rem;
-  width: 50%;
+  width: 90%;
   
   &::placeholder {
     color: ${props => props.theme.lightAccent}

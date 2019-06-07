@@ -7,7 +7,9 @@ import Header from './Header';
 import Filterer from '../../components/Filterer';
 import AddCircle from '../../components/AddCircle';
 import Input from '../../components/Input';
-import { AssignmentCard, Wrapper } from '../../components/Card';
+import { AssignmentCard, Wrapper as CardWrapper } from '../../components/Card';
+import AssignmentInfo from '../../components/AssignmentInfo';
+import AssignmentsContainer from './Container';
 
 class Assignments extends Component {
   static contextType = AssignmentContext;
@@ -30,6 +32,10 @@ class Assignments extends Component {
     })
   };
 
+  openInfoHandler = () => {
+    console.log("Yo")
+  };
+
   render() {
     const [assignments] = this.context;
 
@@ -37,20 +43,28 @@ class Assignments extends Component {
         <AssignmentsWrapper>
           <Header>
             <Heading.medium>Assignments</Heading.medium>
-            <div>{assignments.length} assignments left</div>
+            <div>{assignments ? assignments.length : 0} assignments left</div>
             <Filterer />
           </Header>
-          <Input
-              placeholder="Quick Entry..."
-              onChange={(event) => this.setState({ quickEntryValue: event.target.value })}
-              onKeyDown={(event) => event.keyCode === 13 ? this.addAssignmentHandler(event.target.value) : null}
-              value={this.state.quickEntryValue}
-          />
-          <Wrapper padding={3}>
-            {assignments.map(assignment => (
-                <AssignmentCard key={assignment.title} checkbox title={assignment.title} description={assignment.descr} />
-            ))}
-          </Wrapper>
+          <AssignmentsContainer>
+            <Input
+                placeholder="Quick Entry..."
+                onChange={(event) => this.setState({ quickEntryValue: event.target.value })}
+                onKeyDown={(event) => event.keyCode === 13 ? this.addAssignmentHandler(event.target.value) : null}
+                value={this.state.quickEntryValue}
+            />
+            <CardWrapper padding={3}>
+              {assignments ? assignments.map(assignment => (
+                  <AssignmentCard
+                      key={assignment.title}
+                      checkbox
+                      title={assignment.title}
+                      description={assignment.descr}
+                  />
+              )) : null}
+            </CardWrapper>
+            <AssignmentInfo />
+          </AssignmentsContainer>
           <AddCircle radius={6} />
         </AssignmentsWrapper>
     )

@@ -19,7 +19,6 @@ const layout = props => {
         <AssignmentContext.Provider value={[assignmentsState[0], setAssignment]}>
           <Router />
         </AssignmentContext.Provider>
-        <Router />
       </Wrapper>
   );
 };

@@ -24,9 +24,9 @@ const Dashboard = () => {
         </DashboardSection>
         <DashboardSection title="Assignments" gridRow="1 / -1">
           <Wrapper padding={2}>
-            {assignments.map(assignment => (
+            {assignments ? assignments.map(assignment => (
                 <AssignmentCard key={assignment.title} checkbox title={assignment.title} description={assignment.descr} />
-            ))}
+            )) : null}
           </Wrapper>
         </DashboardSection>
         <DashboardSection title="Tests" gridRow="1 / span 1" />
