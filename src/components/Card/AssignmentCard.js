@@ -3,13 +3,13 @@ import Card from "./Card";
 import Checkbox from "./Checkbox";
 import * as Information from "./Information";
 
-const assignmentCard = ({ title, description="", margin }) => {
+const assignmentCard = ({ title, description="", margin, onClick, id }) => {
   const [checked, setChecked] = useState(false);
 
   const onCheckedHandler = (event) => setChecked(event.target.checked);
 
   return (
-      <Card margin={margin}>
+      <Card margin={margin} id={id} onClick={onClick}>
         <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/>
         <div>
           <Information.title>{title}</Information.title>

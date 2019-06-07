@@ -9,7 +9,6 @@ const layout = props => {
   const assignmentsState = useState([]);
 
   const setAssignment = (assignment) => {
-    console.log('test');
     assignmentsState[1](assignment)
   };
 
