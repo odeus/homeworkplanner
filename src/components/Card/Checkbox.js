@@ -12,8 +12,7 @@ const opacityAnimation = props => keyframes`
   }
 `;
 
-const StyledCheckBox = styled.span`
-  display: inline-block;
+const StyledCheckBox = styled.div`
   width: 2rem;
   height: 2rem;
   border: 2px solid ${props => props.theme.textColor};
@@ -38,14 +37,14 @@ const NativeCheckbox = styled.input.attrs({ type: 'checkbox' })`
 `;
 
 const checkbox = ({ checked, onCheckedHandler }) => (
-    <div>
-      <label>
-        <NativeCheckbox checked={checked} onChange={onCheckedHandler} />
-        <StyledCheckBox checked={checked}>
-          <Check checked={checked} />
-        </StyledCheckBox>
-      </label>
-    </div>
+  <div>
+    <label> 
+      <NativeCheckbox checked={checked} onChange={onCheckedHandler} />
+      <StyledCheckBox checked={checked}>
+        <Check checked={checked} />
+      </StyledCheckBox>
+    </label>
+  </div>
 );
 
 export default checkbox;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import Input from '../../components/Input/Input';
+import Input from '../../components/Input/';
 import AssignmentInfo from '../../components/AssignmentInfo/Wrapper';
-import { Wrapper as CardWrapper } from '../../components/Card/'
+import { Wrapper as CardWrapper } from '../../components/Card/';
 
 export default styled.div`
   display: grid;

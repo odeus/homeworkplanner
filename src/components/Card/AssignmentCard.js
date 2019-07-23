@@ -9,13 +9,13 @@ const assignmentCard = ({ title, description="", margin, onClick, id }) => {
   const onCheckedHandler = (event) => setChecked(event.target.checked);
 
   return (
-      <Card margin={margin} id={id} onClick={onClick}>
-        <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/>
-        <div>
-          <Information.title>{title}</Information.title>
-          <Information.description>{description}</Information.description>
-        </div>
-      </Card>
+    <Card margin={margin} id={id} onClick={onClick}>
+      <Checkbox checked={checked} onCheckedHandler={onCheckedHandler}/>
+      <div>
+        <Information.title>{title ? title : 'Untitled Assignment'}</Information.title>
+        <Information.description>{description}</Information.description>
+      </div>
+    </Card>
   );
 };
 

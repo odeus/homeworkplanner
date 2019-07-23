@@ -5,6 +5,6 @@ export default styled.div`
   display: flex;
   flex-direction: column;
   justify-content: ${props => props.hasAssignment ? 'flex-start': 'center'};
-  align-items: center;
+  align-items: ${props => props.hasAssignment ? 'flex-start' : 'center'};
   padding: 3rem;
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
- export default styled.div`
+export default styled.div`
   width: ${props => props.width};
   height: ${props => props.height};
   background-color: #fff;

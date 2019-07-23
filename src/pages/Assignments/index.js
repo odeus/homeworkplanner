@@ -22,20 +22,19 @@ class Assignments extends Component {
   addAssignmentHandler = (value) => {
     const [assignments, setAssignments] = this.context;
     setAssignments([
-        ...assignments,
-        {
-          title: value,
-          descr: 'test',
-          id: assignments.length
-        }
+      ...assignments,
+      {
+        title: value,
+        descr: 'test',
+        id: assignments.length
+      }
     ]);
     this.setState({
       quickEntryValue: ''
-    })
+    });
   };
 
   clickAssignmentHandler = (event) => {
-    const [assignments] = this.context;
     this.setState({
       selectedAssignment: event.currentTarget.id
     });
@@ -58,36 +57,37 @@ class Assignments extends Component {
     const [assignments] = this.context;
 
     return (
-        <AssignmentsWrapper>
-          <Header>
-            <Heading.medium>Assignments</Heading.medium>
-            <div>{assignments ? assignments.length : 0} assignments left</div>
-            <Filterer />
-          </Header>
-          <AssignmentsContainer>
-            <Input
-                placeholder="Quick Entry..."
-                onChange={(event) => this.setState({ quickEntryValue: event.target.value })}
-                onKeyDown={(event) => event.keyCode === 13 ? this.addAssignmentHandler(event.target.value) : null}
-                value={this.state.quickEntryValue}
-            />
-            <CardWrapper padding={3}>
-              {assignments ? assignments.map((assignment, index) => (
-                  <AssignmentCard
-                      key={index}
-                      id={index}
-                      checkbox
-                      title={assignment.title}
-                      description={assignment.descr}
-                      onClick={this.clickAssignmentHandler}
-                  />
-              )) : null}
-            </CardWrapper>
-            <AssignmentInfo id={this.state.selectedAssignment} change={this.changeAssignmentHandler}/>
-          </AssignmentsContainer>
-          <AddCircle radius={6} />
-        </AssignmentsWrapper>
-    )
+      <AssignmentsWrapper>
+        <Header>
+          <Heading.medium>Assignments</Heading.medium>
+          <div>{assignments ? assignments.length : 0} assignments left</div>
+          <Filterer />
+        </Header>
+        <AssignmentsContainer>
+          <Input
+            placeholder="Quick Entry..."
+            onChange={(event) => this.setState({ quickEntryValue: event.target.value })}
+            onKeyDown={(event) => event.keyCode === 13 ? this.addAssignmentHandler(event.target.value) : null}
+            value={this.state.quickEntryValue}
+            margin={2}
+          />
+          <CardWrapper padding={3}>
+            {assignments ? assignments.map((assignment, index) => (
+              <AssignmentCard
+                key={index}
+                id={index}
+                checkbox
+                title={assignment.title}
+                description={assignment.descr}
+                onClick={this.clickAssignmentHandler}
+              />
+            )) : null}
+          </CardWrapper>
+          <AssignmentInfo id={this.state.selectedAssignment} change={this.changeAssignmentHandler}/>
+        </AssignmentsContainer>
+        <AddCircle radius={6} />
+      </AssignmentsWrapper>
+    );
   }
 }
 
