@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import  { small } from '../Heading'
+import { small } from '../Heading';
 
 export default styled.div`
   ${props => props.row && css`

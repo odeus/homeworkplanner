@@ -26,7 +26,7 @@ const assignmentInfo = ({ id, change }) => {
               value={assignment.title} 
               placeholder={!assignment.title ? 'Untitled Assignment' : ''}
               onChange={onChange('title')} />
-            <Textarea defaultValue={assignment.descr} onChange={onChange('descr')}></Textarea>
+            <Textarea value={assignment.descr} onChange={onChange('descr')} minRows={3}></Textarea>
           </React.Fragment>
         )
       }

@@ -78,7 +78,7 @@ class Assignments extends Component {
                 id={index}
                 checkbox
                 title={assignment.title}
-                description={assignment.descr}
+                description={assignment.descr.length < 50 ? assignment.descr : `${assignment.descr.slice(0, 50)}...`}
                 onClick={this.clickAssignmentHandler}
               />
             )) : null}
