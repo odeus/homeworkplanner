@@ -23,6 +23,6 @@ const a = b => console.log(b)
 ```
 - We allow `for ... of ...` statements because sometimes `for ... of ...` loops look much better than standard array iterations.
 
-## A note about pakcages
+## A note about packages
 We try to keep external packages to a minimum and write the CSS mostly ourselves, if possible. Only packages that are not easily
 coded ourselves can be added. Please contact me if you are doubting about adding a certain package.
