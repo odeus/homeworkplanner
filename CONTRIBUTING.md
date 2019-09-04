@@ -15,6 +15,9 @@ My goal for this project is to develop a fully functional system that...
 - Automatically plans in homework for you so you don't have to do it
 - Organizes the general tasks in your life, e.g. playing football or doing the dishes
 
+## How to report a bug
+_TODO_
+
 ## Javascript Style Guide
 We use the [Airbnb Base Styleguide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) as our leading styleguide with some minor overwrites, namely:
 - We allow to omit the parens if you write an arrow function with one parameter, for example, the following piece of code is allowed:
@@ -23,6 +26,15 @@ const a = b => console.log(b)
 ```
 - We allow `for ... of ...` statements because sometimes `for ... of ...` loops look much better than standard array iterations.
 
+## Where can I ask for help
+_TODO_
+
 ## A note about packages
 We try to keep external packages to a minimum and write the CSS mostly ourselves, if possible. Only packages that are not easily
 coded ourselves can be added. Please contact me if you are doubting about adding a certain package.
+
+## Do I get any recognition?
+Yes you do! We follow the [all contributors](https://github.com/all-contributors/all-contributors) spec. If you make any kind of contribution to this project you will be noted.
+
+Yours sincerely,
+Noah van Boven
