@@ -24,6 +24,15 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "SWR20",
+      "name": "SWR20",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/52825364?v=4",
+      "profile": "https://github.com/SWR20",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
