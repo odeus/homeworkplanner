@@ -1,5 +1,5 @@
 # Homeworkplanner
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 
 ## Contributors ✨
@@ -11,6 +11,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/jasperro"><img src="https://avatars1.githubusercontent.com/u/42558625?v=4" width="100px;" alt="jasperro"/><br /><sub><b>jasperro</b></sub></a><br /><a href="#maintenance-jasperro" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://noahvb.nl"><img src="https://avatars1.githubusercontent.com/u/14055571?v=4" width="100px;" alt="Nola1222"/><br /><sub><b>Nola1222</b></sub></a><br /><a href="#design-nobobo1234" title="Design">🎨</a> <a href="https://github.com/nobobo1234/homeworkplanner/commits?author=nobobo1234" title="Code">💻</a> <a href="#maintenance-nobobo1234" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
