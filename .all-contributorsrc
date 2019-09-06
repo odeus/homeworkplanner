@@ -13,6 +13,17 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "nobobo1234",
+      "name": "Nola1222",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/14055571?v=4",
+      "profile": "https://noahvb.nl",
+      "contributions": [
+        "design",
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
