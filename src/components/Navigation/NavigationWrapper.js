@@ -6,6 +6,6 @@ export default styled.div`
   flex-direction: column;
   align-items: center;
 
-  background-color: #fff;
+  background-color: #0db2ce;
   padding: 2rem;
 `;

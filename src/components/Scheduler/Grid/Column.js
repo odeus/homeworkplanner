@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten } from 'polished'
+import { lighten } from 'polished';
 
 export default styled.div`
   display: flex;
@@ -7,6 +7,6 @@ export default styled.div`
   
   & > * {
     height: 6rem;
-    background-color: ${props => props.currentDay ? lighten(.43, props.theme.mainColor)  : 'none'};
+    background-color: ${(props) => (props.currentDay ? lighten(0.43, props.theme.mainColor) : 'none')};
   }
 `;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 class School extends Component {
-  render() {
-    return (
-        <div>
+    render() {
+        return (
+            <div>
           Bonjour
-        </div>
-    )
-  }
+            </div>
+        );
+    }
 }
 
 export default School;
