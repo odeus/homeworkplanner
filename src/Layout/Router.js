@@ -7,7 +7,7 @@ const Calendar = React.lazy(() => import('../pages/Calendar'));
 const Assignments = React.lazy(() => import('../pages/Assignments'));
 const School = React.lazy(() => import('../pages/School'));
 
-const router = (props) => (
+const router = () => (
     <Suspense fallback={<h1>Loading...</h1>}>
         <Switch>
             <Route path="/" exact component={Dashboard} />

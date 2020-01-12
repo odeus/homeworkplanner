@@ -5,7 +5,7 @@ import Wrapper from './Wrapper';
 import Router from './Router';
 import Navigation from '../components/Navigation';
 
-const layout = (props) => {
+const Layout = () => {
     const assignmentsState = useState([]);
 
     const setAssignment = (assignment) => {
@@ -22,4 +22,4 @@ const layout = (props) => {
     );
 };
 
-export default layout;
+export default Layout;

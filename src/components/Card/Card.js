@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.lightAccent};
+  border-radius: 2rem;
   display: flex;
   align-items: center;
   color: ${(props) => props.theme.textColor};

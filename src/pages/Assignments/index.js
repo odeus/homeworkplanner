@@ -5,7 +5,6 @@ import AssignmentsWrapper from './Assignments';
 import Heading from '../../components/Heading';
 import Header from './Header';
 import Filterer from '../../components/Filterer';
-import AddCircle from '../../components/AddCircle';
 import Input from '../../components/Input';
 import { AssignmentCard, Wrapper as CardWrapper } from '../../components/Card';
 import AssignmentInfo from '../../components/AssignmentInfo';
@@ -99,7 +98,6 @@ class Assignments extends Component {
                     </CardWrapper>
                     <AssignmentInfo id={selectedAssignment} change={this.changeAssignmentHandler} />
                 </AssignmentsContainer>
-                <AddCircle radius={6} />
             </AssignmentsWrapper>
         );
     }

@@ -5,7 +5,10 @@ import NavItem from './NavItem';
 import * as Logo from './Logo';
 import logoSquare from '../../assets/logo_square.png';
 import NavigationWrapper from './NavigationWrapper';
-import { ReactComponent as DashboardLogo } from '../../assets/dasboard.svg';
+import { ReactComponent as DashboardLogo } from '../../assets/dashboard.svg';
+import { ReactComponent as CalendarLogo } from '../../assets/calendar.svg';
+import { ReactComponent as SchoolLogo } from '../../assets/school.svg';
+import { ReactComponent as ListLogo } from '../../assets/list.svg';
 
 const navigation = () => (
     <NavigationWrapper>
@@ -16,11 +19,15 @@ const navigation = () => (
             <NavItem to="/" logo={DashboardLogo}>
                 <DashboardLogo />
             </NavItem>
-            <NavItem to="/calendar">Calendar</NavItem>
-            <NavItem to="/assignments">Assignments</NavItem>
-            <NavItem to="/school">School</NavItem>
-            <NavItem to="/teachers">Teachers</NavItem>
-            <NavItem to="/holidays">Holidays</NavItem>
+            <NavItem to="/calendar" color="#0F9FB7">
+                <CalendarLogo />
+            </NavItem>
+            <NavItem to="/school" color="#0C8B9E">
+                <SchoolLogo />
+            </NavItem>
+            <NavItem to="/assignments" color="#0C7D8F">
+                <ListLogo />
+            </NavItem>
         </NavList>
     </NavigationWrapper>
 );

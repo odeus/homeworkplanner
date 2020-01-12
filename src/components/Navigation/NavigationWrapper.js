@@ -7,5 +7,4 @@ export default styled.div`
   align-items: center;
 
   background-color: #0db2ce;
-  padding: 2rem;
 `;

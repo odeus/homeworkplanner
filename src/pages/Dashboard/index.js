@@ -3,7 +3,6 @@ import AssignmentContext from '../../shared/contexts/context';
 
 import DashboardWrapper from './Dashboard';
 import DashboardSection from '../../components/DashboardSection';
-import AddCircle from '../../components/AddCircle';
 import { ClassCard, AssignmentCard, Wrapper } from '../../components/Card';
 
 const Dashboard = () => {
@@ -38,7 +37,6 @@ const Dashboard = () => {
             </DashboardSection>
             <DashboardSection title="Tests" gridRow="1 / span 1" />
             <DashboardSection title="Calendar" gridRow="2 / span 1" />
-            <AddCircle radius={6} />
         </DashboardWrapper>
     );
 };

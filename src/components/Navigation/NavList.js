@@ -6,7 +6,4 @@ export default styled.div`
 
   height: 100%;
   width: 100%;
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
 `;

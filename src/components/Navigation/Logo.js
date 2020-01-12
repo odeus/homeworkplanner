@@ -12,5 +12,6 @@ export const img = styled.img.attrs((props) => ({
 export const wrapper = styled.div`
   justify-self: center;
   flex-grow: 0.1;
-  margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 `;

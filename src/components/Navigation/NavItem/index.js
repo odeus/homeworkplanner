@@ -3,22 +3,23 @@ import styled from 'styled-components';
 
 import Link from './Link';
 
-const ListItem = styled(Link)`
+const ListItem = styled.div`
   display: flex;
-  justify-content: center;
-  cursor: pointer;
   fill: white;
   width: 100%;
+  background-color: ${(props) => props.color};
+  align-items: flex-start;
 
-  svg {
-    width: 100%;
-    height: auto;
+  &:last-child {
+    flex: 1;
   }
 `;
 
-const NavItem = ({ to, children }) => (
-    <ListItem to={to} exact>
-        {children}
+const NavItem = ({ to, children, color = 'transparent' }) => (
+    <ListItem color={color}>
+        <Link to={to} exact>
+            {children}
+        </Link>
     </ListItem>
 );
 
