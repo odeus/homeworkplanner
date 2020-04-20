@@ -9,8 +9,4 @@ export default styled.input`
   font-size: 1.5rem;
   width: 90%;
   margin: ${(props) => (props.margin ? props.margin : 0)}rem;
-  
-  &::placeholder {
-    color: ${(props) => props.theme.lightAccent}
-  }
 `;
