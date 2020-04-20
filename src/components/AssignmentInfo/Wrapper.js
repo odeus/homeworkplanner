@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  border-left: 2px solid ${props => props.theme.lightAccent};
+  border-left: 2px solid ${(props) => props.theme.lightAccent};
   display: flex;
   flex-direction: column;
-  justify-content: ${props => props.hasAssignment ? 'flex-start': 'center'};
-  align-items: ${props => props.hasAssignment ? 'flex-start' : 'center'};
+  justify-content: ${(props) => (props.hasAssignment ? 'flex-start' : 'center')};
+  align-items: ${(props) => (props.hasAssignment ? 'flex-start' : 'center')};
   padding: 3rem;
 `;

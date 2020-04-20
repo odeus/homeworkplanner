@@ -1,11 +1,7 @@
 import React from 'react';
 
-const radioGroup = ({ options }) => {
-  return ( 
-    <React.Fragment>
-        
-    </React.Fragment>
-  );
-};
+const radioGroup = () => (
+    <div />
+);
 
 export default radioGroup;

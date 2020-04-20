@@ -9,7 +9,6 @@ export default styled(TextareaAutosize)`
     background-color: transparent;
     padding: 1rem .5rem;
     font-size: 1.5rem;
-    border-bottom: 1px solid ${props => props.theme.lightAccent};
+    border-bottom: 1px solid ${(props) => props.theme.lightAccent};
     width: 90%;
 `;
-

@@ -9,7 +9,7 @@ export default styled.div`
   /* Do the scrollHeight minus the length of the header times the percentage. And add the 12rem of the header
    to it again, so it begins at 'the start of the times'
    y = (containerHeight-headerHeight)*percentage + headerHeight*/
-  top: calc((${props => props.scrollHeight}px - 12rem)*${props => props.percentage} + 12rem);
+  top: calc((${(props) => props.scrollHeight}px - 12rem)*${(props) => props.percentage} + 12rem);
   z-index: 50;
-  background-color: ${props => props.theme.mainColor};
+  background-color: ${(props) => props.theme.mainColor};
 `;

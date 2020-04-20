@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TOOLBAR_HEIGHT } from "../Toolbar/Wrapper";
+import { TOOLBAR_HEIGHT } from '../Toolbar/Wrapper';
 
 export default styled.div`
   display: grid;

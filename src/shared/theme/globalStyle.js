@@ -15,7 +15,6 @@ export default createGlobalStyle`
   }
   
   ::selection {
-    background: ${props => props.theme.lightAccent};
+    background: ${(props) => props.theme.lightAccent};
   }
-`
-
+`;

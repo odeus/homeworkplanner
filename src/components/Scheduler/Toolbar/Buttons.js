@@ -5,7 +5,7 @@ export const Scroll = styled.button`
   border: none;
   background-color: transparent;
   padding: 0 1rem;
-  color: ${props => props.theme.textColor};
+  color: ${(props) => props.theme.textColor};
   cursor: pointer;
   transition: fill .2s;
   outline: none;
@@ -15,7 +15,7 @@ export const Scroll = styled.button`
   }
   
   &:hover {
-    fill: ${props => props.theme.mainColor};
+    fill: ${(props) => props.theme.mainColor};
   }
 `;
 
@@ -23,7 +23,7 @@ export const Today = styled.button`
   font-size: 1.6rem;
   background-color: transparent;
   padding: .5rem 1rem;
-  color: ${props => props.theme.textColor};
+  color: ${(props) => props.theme.textColor};
   cursor: pointer;
   outline: none;
   border: none;

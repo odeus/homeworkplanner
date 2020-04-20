@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { weekStart } from "../../shared/dates/date";
+import { weekStart } from '../../shared/dates/date';
 
 import Grid from './Grid';
-import Toolbar from './Toolbar/';
+import Toolbar from './Toolbar';
 
 const Wrapper = styled.div`
   max-height: 100vh;
@@ -11,14 +11,14 @@ const Wrapper = styled.div`
 `;
 
 const Scheduler = ({ beginAt }) => {
-  const [date, setDate] = useState(weekStart(new Date()));
+    const [date, setDate] = useState(weekStart(new Date()));
 
-  return (
-    <Wrapper>
-      <Toolbar date={date} setDate={setDate} />
-      <Grid date={date} beginAt={beginAt} />
-    </Wrapper>
-  )
+    return (
+        <Wrapper>
+            <Toolbar date={date} setDate={setDate} />
+            <Grid date={date} beginAt={beginAt} />
+        </Wrapper>
+    );
 };
 
 export default Scheduler;
