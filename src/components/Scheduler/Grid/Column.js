@@ -8,5 +8,6 @@ export default styled.div`
   & > * {
     height: 6rem;
     background-color: ${(props) => (props.currentDay ? lighten(0.43, props.theme.mainColor) : 'none')};
+    border: .5px solid ${(props) => (!props.noborder ? props.theme.lightAccent : 'transparent')};
   }
 `;

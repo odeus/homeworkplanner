@@ -39,7 +39,7 @@ const Grid = ({ beginAt, date }) => {
                 percentage={currentTime / (24 * 60)}
                 scrollHeight={scrollHeight}
             />
-            <Column ref={getScrollHeightFromNode}>
+            <Column noborder ref={getScrollHeightFromNode}>
                 <FixedSide bold>{weekString(date)}</FixedSide>
                 <FixedSide allDay>All Day</FixedSide>
                 {getHourArray(beginAt).map((hour, i) => (
